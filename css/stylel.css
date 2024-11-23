@@ -1,0 +1,673 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*============================================== header section styling start=================================*/
+.navbar{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    font-family: 'Ubuntu',sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 1px 0;
+    background-color:crimson;
+}
+.navbar .max-width{
+    width:1170px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+   font-size: 35px;
+   font-weight: 600;
+   color: #fff;
+   transition: all 0.3s ease;
+}
+.navbar.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .logo a span{
+    color: red;
+}
+.navbar .manu{
+    display: flex;
+    /* display: block; */
+    list-style: none;
+    padding-top:15px;
+}
+.navbar .manu li a{
+    display: block;
+    color: #fff;
+    margin-left: 20px;
+    transition: all 0.4s;
+}
+.navbar .manu li a:hover{
+    color: red;
+}
+.navbar.navbar.sticky .manu li a:hover{
+    color: yellow;
+}
+/*------manu-batn styling start------ */
+.manu-btn{
+    color: #ffff;
+    cursor: pointer;
+    display: none;
+}
+
+/*-----manu-batn styling end---- */
+/*=================================== header section styling end================================= */
+/*===================================home section styling start================================== */
+header{
+    font-family: 'Ubuntu',sans-serif;
+    /* background-image: linear-gradient(to top,  #100606 0%, rgba(17, 4, 4, 0) 100%), url('/img/3541.jpg') ; */
+    background: url(/img/pexels-bibekghosh-14553713.jpg) no-repeat center;
+    background-size: cover;
+    height:100vh;
+}
+.content .home-content{
+    padding-top: 200px;
+    text-align: center;
+    color: #ffff;
+}
+.content .home-content a{
+    display: inline-block;
+    padding-top: 20px;
+    background: crimson;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 50px;
+    transition: all 0.4s;
+}
+.content .home-content a:hover{
+    background:rgb(218, 156, 42);
+    color: red;
+}
+.content .home-content div{
+    font-family: 'Ubuntu',sans-serif;
+}
+.content .home-content .text-1{
+    font-size: 27px;
+}
+.content .home-content .text-2{
+   font-size: 65px;
+   font-weight: 600;
+}
+.content .home-content .text-3{
+    font-size: 40px;
+}
+.content .home-content .text-3 span{
+    color: rgb(255, 255, 0);
+}
+/* -------scrol-up-btn styling start------- */
+.scrol-up-btn{
+    position: fixed;
+    background-color: crimson;
+    color: white;
+    height: 43px;
+    width: 40px;
+    bottom: 50px;
+    right: 40px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 9999;
+    line-height: 45px;
+    cursor: pointer;
+    font-size:30px;
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+}
+.scrol-up-btn.show{
+    opacity:1;
+    pointer-events: auto;
+    bottom: 50px;
+
+}
+/* -------scrol-up-btn styling end------- */
+/* ========================================home section styling end=============================== */
+
+/* ========================================About section styling start==================================== */
+section{
+    padding: 100px 0;
+}
+/* -------------------------after style--- */
+section .taitel{
+    text-align: center;
+    position: relative;
+    color: #111;
+    font-size: 30px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu',sans-serif;
+}
+
+section .taitel::before{
+    content: "";
+    width: 180px;
+    height: 3px;
+    bottom: 0px;
+    left:50%;
+    background-color: #111;
+    position: absolute;
+    transform: translatex(-50%);
+}
+section .taitel::after{
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    position: absolute;
+    background-color: #fff;
+    transform: translatex(-50%);
+
+}
+.about .taitel::after{
+    content: "who i m";
+}
+/* -----------------------after style end--- */
+.about .about-content{
+    padding: 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about .about-content .column-left{
+    width:45%;
+}
+.about .about-content .column-left img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-content .column-right{
+    width: 55%;
+    font-family: 'Ubuntu',sans-serif;
+}
+.about .about-content .column-right .text{
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: 500;
+}
+.about .about-content .column-right .text span{
+    color:crimson;
+}
+.column-right a{
+    display: inline-block;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    margin-top: 30px;
+    background-color: red;
+    transition: all 0.4s;
+}
+.column-right a:hover{
+    background-color: rgb(169, 81, 81);
+}
+/* ========================================About section styling end==================================== */
+/* ========================================Services section styling start============================== */
+.Services,
+.Teams{
+    background-color: #111;
+}
+.Services .taitel,
+.Teams .taitel{
+    color: #fff;
+}
+.Services .taitel::before,
+.Teams .taitel::before{
+    background-color: #fff;
+}
+.Services .taitel::after{
+    background-color: #111;
+    content:"whti i provede";
+}
+.Services .Services-content{
+    padding: 0px 60px;
+    display: flex;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.Services .Services-content .card{
+    width: calc(30% - 20px);
+    background-color: #222;
+    color: #fff;
+    margin: 20px 25px;
+    font-family: 'Ubuntu',sans-serif;
+
+}
+.Services .Services-content .card .box{
+    padding: 10px;
+    transition: all 0.5s ease;
+}
+.Services .Services-content .card:hover .box{
+    transform: scale(1.04);
+}
+.Services .Services-content .card .box:hover{
+    background-color: crimson;
+    border-radius: 6px;
+    color: #fff;
+}
+.Services .Services-content .card i{
+    color: crimson;
+    font-size: 50px;
+}
+.Services .Services-content .card .box:hover i{
+    color: white;
+}
+.Services .Services-content .card .text{
+    font-size: 25px;
+    padding: 10px 0;
+}
+
+/* ========================================Services section styling end============================== */
+/* ========================================skills section styling start============================== */
+.Skills .taitel::after{
+    content: "what i kwon";
+    font-weight: bold;
+}
+.Skills .Skills-content{
+    padding: 0px 60px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-family: 'Ubuntu',sans-serif;
+}
+.Skills .Skills-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
+}
+.Skills .Skills-content .column-left{
+    width: calc(50% - 30px);
+}
+.Skills .Skills-content .column-left a{
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    border-radius: 10px;
+    background-color: red;
+    transition: all 0.4s;
+}
+.Skills .Skills-content .column-left a:hover{
+    background-color: rgb(169, 81, 81);
+}
+.Skills .Skills-content .column-right{
+    width: 50%;
+    padding: 10px;
+    color:white;
+    border-radius: 4px;
+    background-color: #c1b5b5;
+}
+.Skills .Skills-content .column-right .bars{
+    margin-bottom: 10px;
+}
+.Skills .Skills-content .column-right .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:10px;
+    gap: 10px;
+}
+.Skills .Skills-content .column-right .info span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.Skills .Skills-content .column-right .info div{
+    width:100%;
+    height: 10px;
+    border-radius: 2px;
+    background-color:lightgrey;
+    position: relative;
+}
+.Skills .Skills-content .column-right .info div::before{
+    content: "";
+    height:100%;
+    width: 100%;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: crimson;
+}
+.Skills .Skills-content .column-right .info .html-line::before{
+    width: 95%;
+}
+.Skills .Skills-content .column-right .info .css-line::before{
+    width: 90%;
+}
+.Skills .Skills-content .column-right .info .bootstrap-line::before{
+    width: 80%;
+}
+.Skills .Skills-content .column-right .info .javascript-line::before{
+    width: 50%;
+}
+.Skills .Skills-content .column-right .info .php-line::before{
+    width: 70%;
+}
+.Skills .Skills-content .column-right .info .databash-line::before{
+    width: 50%;
+}
+.Skills .Skills-content .column-right .info .mysql-line::before{
+    width: 60%;
+}
+/* ========================================skills section styling end============================== */
+/* ========================================Teams section stylin start ============================= */
+
+.Teams .taitel::after{
+    content: "who with me";
+    font-weight: bold;
+    background-color: #111;
+}
+.Teams .carousel{
+    padding: 0px 60px;
+}
+.Teams .carousel .card{
+    background: #2d324a;
+    text-align: center;
+    font-family: 'Ubuntu',sans-serif;
+    padding: 5px;
+}
+.Teams .carousel .card:hover {
+    background-color: crimson;
+    transition: all 0.4s ease;
+}
+.Teams .carousel .card:hover .box{
+    transform: scale(1.05);
+    transition: all 0.4s ease;
+}
+.Teams .carousel .card .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.Teams .carousel .card .img-itm{
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+.Teams .carousel .card .img-itm img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border: 5px solid crimson;
+}
+.Teams .carousel .card:hover img{
+    border: 5px solid white;
+}
+.Teams .carousel .card .info .name{
+    background-color: yellow;
+    top: -25px;
+    left: 90px;
+    padding:10px 30px;
+    border-radius: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+.Teams .carousel .card .info .post{
+    margin-top: 30px;
+    font-size: 25px;
+    color: crimson;
+    font-weight: 600;
+}
+.Teams .carousel .card:hover .post{
+    color: white;
+    transition: all 0.4s ease;
+
+}
+.Teams .carousel .card .info .text{
+    color: #fff;
+    padding: 10px; 
+}
+.Teams .carousel .card .footer-itm{
+    padding: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Teams .carousel .card .footer-itm .itm button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color:yellow;
+    color:crimson;
+    outline: none;
+    border: none;
+}
+.Teams .carousel .card .footer-itm .btn button{
+    border-radius: 50px;
+    padding: 10px 30px;
+    background-color:yellow;
+    color:crimson;
+    outline: none;
+    border: none;
+}
+/* ========================================Teams section stylin end ============================= */
+/* ==============================Contact section styling start=================================== */
+.Contact .taitel::after{
+    content: "get in touch";
+}
+.Contact .Contact-content{
+    padding: 0px 60px;
+    font-family: 'Ubuntu',sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+.Contact .Contact-content .column-left{
+    width: 50%;
+}
+.Contact .Contact-content .column-left .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Contact .Contact-content .column-left .row-itm{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.Contact .Contact-content .column-left i{
+    font-size: 20px;
+    color: crimson;
+}
+.Contact .Contact-content .column-left .info{
+    margin-left: 20px;
+}
+.Contact .Contact-content .column-left .info .haed{
+    font-weight: 500;
+}
+.Contact-content .column-right{
+    width: 50%;
+}
+.Contact-content .column-right .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Contact-content .column-right .input-itm{
+    display: flex;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+.Contact-content .column-right .input-itm .itm-left{
+    width:50%;
+}
+.Contact-content .column-right .input-itm .itm-left input{
+    width: 100%;
+   padding: 10px;
+   border: none;
+   outline: none;
+   border-radius: 20px;
+   background-color: #F0F2F5;
+}
+.Contact-content .column-right .input-itm .itm-right{
+    width:50%;
+}
+.Contact-content .column-right .input-itm .itm-right input{
+   width:100%;
+   padding: 10px;
+   border: none;
+   outline: none;
+   background-color: #F0F2F5;
+   border-radius: 20px;
+}
+.Contact-content .column-right .subject input{
+   width: 100%;
+   padding: 10px;
+   border: none;
+   outline: none;
+   background-color: #F0F2F5;
+   border-radius: 20px;
+}
+.Contact-content .column-right .text-area{
+    margin-top: 10px;
+}
+.Contact-content .column-right .text-area textarea{
+    width: 100%;
+    height: 130px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #F0F2F5;
+    border-radius: 20px;
+}
+.Contact-content .column-right .btn-itm{
+    margin-top: 10px;
+}
+.Contact-content .column-right .btn-itm button{
+    padding: 10px;
+    width: 100%;
+    border-radius: 20px;
+    background-color:#c6cbd3;
+    transition: all 0.6s;
+    border: none;
+}
+.Contact-content .column-right .btn-itm button:hover{
+    background-color: #F0F2F5;
+}
+/* ==============================Contact section styling end =================================== */
+/* ==============================footer eection styling start=================================== */
+footer{
+    background-color: black;
+    padding: 20px 23px;
+    color: white;
+    text-align: center;
+}
+footer span a{
+    color: crimson;
+    text-decoration: none;
+}
+/* ==============================footer eection styling end =================================== */
+/* ========================================responsive madia qurey start============================ */
+/* -------------------nevbar responsive start----------------- */
+@media(max-width:1110px){
+   
+    .Services .Services-content .card{
+        width:calc(45% - 10px);
+        margin-bottom:20px;
+    }
+   
+}
+    @media(max-width:1040px){
+        .manu-btn{
+            display: block;
+            margin-right: 20px;
+            z-index: 999;
+        }
+        .manu-btn i.active:before{
+            content:"\f00d";
+        }
+        .navbar .logo a{
+    
+            margin-left: 20px;
+        }
+        .navbar .manu{
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            left:-100%;
+            top:0;
+            background-color: #111;
+            text-align: center;
+            display:block;
+            padding-top: 55px;
+            transition: all 0.4s;
+        }
+        .navbar .manu.active{
+           left: 0;
+        }
+        .navbar .manu li a{
+            display: inline-block;
+            align-items: center;
+            margin: 20px 0;
+            font-size: 25px;
+        }
+        .content .home-content a{
+            display: inline-block;
+            padding: 5px 30px;
+        }
+           /* -----------about styling start---------------- */
+        /* .about-content{
+            max-width: 1000px;
+        } */
+        .about .about-content .column-left{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        .about .about-content .column-left img{
+            height: 350px;
+            width: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+         } 
+        .about .about-content .column-right{
+            flex: 80%;
+        }
+        .about .about-content{
+            padding: 0px 60px;
+        }
+        .about .about-content .column{
+            width: 100%;
+        }
+         /* -----------about styling end---------------- */
+        .Services .Services-content .card{
+            width:100%;
+        }
+        /* -----------------skills stylin start------------------------ */
+        .Skills .Skills-content .column-left{
+            width:100%;
+        }
+        .Skills .Skills-content .column-right{
+            width:100%;
+        }
+        .Contact .Contact-content .column-left{
+            width: 100%;
+        }
+        .Contact .Contact-content .column-right{
+            width: 100%;
+        }
+
+    }
+
+   
+/* ========================================responsive madia qurey end============================ */
